@@ -19,9 +19,8 @@ class MainActivity : AppCompatActivity() {
 
         val myDataset = DataSource().loadAffirmation()
 
-
-
         recyclerview.adapter = ItemAdapter(this, myDataset)
 
+        recyclerview.setHasFixedSize(false) //TRUE carrega todos os elementos, FALSE mostra alguns elementos e vai aumentando gradativamente.
     }
 }
